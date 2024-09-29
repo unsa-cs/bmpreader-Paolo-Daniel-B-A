@@ -12,12 +12,12 @@ void display() {
   glFlush();
 }
 
-int main(char filename[]) {
+int main(char *filename[]) {
   //char filename[256];
 
   // Pedir al usuario el nombre del archivo BMP
-  printf("Ingrese el nombre del archivo BMP (con extensión): ");
-  scanf("%255s", filename);
+  printf("Ingrese el nombre del archivo BMP (con extensión): %s \n", filename);
+  //scanf("%255s", filename);
 
   image = readBMP(filename);
   if (!image) return 1;
